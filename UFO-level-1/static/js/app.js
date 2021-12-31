@@ -1,7 +1,6 @@
 // from data.js
 var tableData = data;
 
-
 // Use D3 to select the table body
 var tbody = d3.select("tbody");
 
