@@ -57,7 +57,7 @@ function runEnter() {
   // Use D3 to set the table class to `table table-striped`
   table.attr("class", "table table-striped");
   
-  //run if statement
+  //run if statement for blank entry to show all results
   if (inputValue != "") {
 
     console.log(inputValue);
