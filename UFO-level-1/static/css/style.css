@@ -76,6 +76,9 @@ select {
 #table-area th {
   text-align: center;
 }
+#table tr {
+  text-transform: capitalize;
+}
 
 #table-area th:first-child,
 #table-area th:nth-child(2),
