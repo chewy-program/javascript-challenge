@@ -8,8 +8,8 @@
   <title>UFO watch!</title>
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
-  <script src="./static/js/app.js"></script>
   <script src="./static/js/data.js"></script>
+  <script src="./static/js/app.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
 </head>
 
@@ -26,7 +26,7 @@
     </nav>
     <div class="hero text-center">
       <h1>UFO Sightings</h1>
-      <p>The Truth isn't Out There</p>
+      <p>The Truth is Out There</p>
     </div>
     <div class="container">
       <div class="row margin-top-50">
@@ -35,12 +35,28 @@
             <div class="panel panel-default">
               <div class="panel-heading">Filter Search</div>
               <div class="panel-body">
-                <form id="form">
+                <form id="form" action="runEnter">
                   <div class="form-group">
                     <ul class="list-group" id="filters">
                       <li class="filter list-group-item">
-                        <label for="date">Enter a Date</label>
-                        <input class="form-control" id="datetime" type="text" placeholder="1/11/2011">
+                        <label for="date">Enter a Start Date</label>
+                        <input class="form-control" id="start-datetime" type="text" placeholder="1/1/2010">
+                      </li>
+                      <li class="filter list-group-item">
+                        <label for="date">Enter a City</label>
+                        <input class="form-control" id="city" type="text" placeholder="antioch">
+                      </li>
+                      <li class="filter list-group-item">
+                        <label for="date">Enter a State</label>
+                        <input class="form-control" id="state" type="text" placeholder="ca">
+                      </li>
+                      <li class="filter list-group-item">
+                        <label for="date">Enter a Country</label>
+                        <input class="form-control" id="country" type="text" placeholder="us">
+                      </li>
+                      <li class="filter list-group-item">
+                        <label for="date">Enter a Shape</label>
+                        <input class="form-control" id="shape" type="text" placeholder="other">
                       </li>
                     </ul>
                   </div>
@@ -55,13 +71,13 @@
             <table id="ufo-table" class="table table-striped">
               <thead>
                 <tr>
-                  <th class="table-head" onclick="sortTable(0)">Date</th>
-                  <th class="table-head" onclick="sortTable(1)">City</th>
-                  <th class="table-head" onclick="sortTable(2)">State</th>
-                  <th class="table-head" onclick="sortTable(3)">Country</th>
-                  <th class="table-head" onclick="sortTable(4)">Shape</th>
-                  <th class="table-head" onclick="sortTable(5)">Duration</th>
-                  <th class="table-head" onclick="sortTable(6)">Comments</th>
+                  <th class="table-head">Date</th>
+                  <th class="table-head">City</th>
+                  <th class="table-head">State</th>
+                  <th class="table-head">Country</th>
+                  <th class="table-head">Shape</th>
+                  <th class="table-head">Duration</th>
+                  <th class="table-head">Comments</th>
                 </tr>
               </thead>
               <tbody>
